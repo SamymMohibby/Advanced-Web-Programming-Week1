@@ -66,7 +66,7 @@ const documentBody = async () => {
     image.src = imageUrl
     imageContainer.appendChild(image)
     
-    document.body.appendChild(container)
+    document.body.appendChild(wrapper)
 }
 
 
