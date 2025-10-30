@@ -36,9 +36,13 @@ const documentBody = async () => {
 
     //console.log("Wikipedia summary:", summary);
 
+    const container = document.createElement("div")
+    container.className = "container"
+
     const wrapper = document.createElement("div")
     wrapper.className= "wiki-item";
-    
+    container.appendChild(wrapper)
+
     const h2 = document.createElement("h2")
     h2.className = "wiki-header"
     h2.textContent = wikiTitle
@@ -62,7 +66,7 @@ const documentBody = async () => {
     image.src = imageUrl
     imageContainer.appendChild(image)
     
-    document.body.appendChild(wrapper)
+    document.body.appendChild(container)
 }
 
 

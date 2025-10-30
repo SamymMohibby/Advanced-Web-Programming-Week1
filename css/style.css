@@ -77,3 +77,23 @@ body {
   display: block;
   object-fit: cover;
 }
+
+@media (min-width: 600px) {
+  .wiki-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .wiki-content .wiki-text {
+    text-align: left;
+    width: 50%; 
+
+  }
+
+  .img-container {
+    flex: 0 0 auto;
+    width: 50%;
+    max-width: 100%;
+  }
+}
