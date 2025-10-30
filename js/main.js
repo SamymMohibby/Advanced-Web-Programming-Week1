@@ -40,29 +40,29 @@ const documentBody = async () => {
     container.className = "container"
 
     const wrapper = document.createElement("div")
-    wrapper.className= "wiki-item";
+    wrapper.className= ".wiki-item";
     container.appendChild(wrapper)
 
     const h2 = document.createElement("h2")
-    h2.className = "wiki-header"
+    h2.className = ".wiki-header"
     h2.textContent = wikiTitle
     wrapper.appendChild(h2)
 
     const content = document.createElement("div")
-    content.className = "wiki-content"
+    content.className = ".wiki-content"
     wrapper.appendChild(content)
 
     const p = document.createElement("p");
-    p.className = "wiki-text"
+    p.className = ".wiki-text"
     p.textContent = summary
     content.appendChild(p)
 
     const imageContainer = document.createElement("div")
-    imageContainer.className = "img-container"
+    imageContainer.className = ".img-container"
     content.appendChild(imageContainer)
 
     const image = document.createElement("img")
-    image.className = "wiki-img"
+    image.className = ".wiki-img"
     image.src = imageUrl
     imageContainer.appendChild(image)
     
