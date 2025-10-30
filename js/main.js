@@ -67,14 +67,25 @@ const documentBody = async () => {
     imageContainer.appendChild(image)
     
     document.body.appendChild(wrapper)
+    return wrapper;
 }
 
 
 const main = async () => {
+    // Create one main container
+    const mainContainer = document.createElement("div");
+    mainContainer.className = "container";
+    
     //clear document first
     document.body.innerHTML = ""; 
-    for(let i=0; i < 5; i++) {
-        await documentBody()
+    
+    // Add the main container to body
+    document.body.appendChild(mainContainer);
+    
+    // Create 5 wrappers and add them to the main container
+    for(let i = 0; i < 5; i++) {
+        const wrapper = await documentBody();
+        mainContainer.appendChild(wrapper);
     }
 };
 
